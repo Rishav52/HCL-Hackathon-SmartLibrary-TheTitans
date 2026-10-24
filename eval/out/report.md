@@ -1,6 +1,6 @@
 # Evaluation report
 
-Run 2026-10-24T08:09:51 | LLM `rule-based-offline` | embeddings `hashing-v1` (lexical fallback, abstention threshold 0.18)
+Run 2026-10-24T15:54:17 | LLM `gemini:gemini-2.5-flash` | embeddings `st:sentence-transformers/all-MiniLM-L6-v2` (semantic, abstention threshold 0.3)
 
 ## Gates
 
@@ -16,8 +16,8 @@ Run 2026-10-24T08:09:51 | LLM `rule-based-offline` | embeddings `hashing-v1` (le
 | Abstention on unanswerable queries | 1.0 | 0.95 | PASS |
 | Search hit@3, vocabulary-matching queries | 1.0 | 0.85 | PASS |
 | Search MRR, vocabulary-matching queries | 1.0 | 0.6 | PASS |
-| Search hit@3, paraphrase queries | 0.571 | 0.7 | (info, not gated) below target |
-| Latency p95 (ms, lower is better) | 3.2 | 3000.0 | PASS |
+| Search hit@3, paraphrase queries | 0.714 | 0.7 | PASS |
+| Latency p95 (ms, lower is better) | 458.9 | 3000.0 | PASS |
 
 **Overall: PASS**
 
@@ -25,29 +25,28 @@ Run 2026-10-24T08:09:51 | LLM `rule-based-offline` | embeddings `hashing-v1` (le
 
 | Category | n | hit@3 | recall@5 | MRR | false abstain |
 |---|---|---|---|---|---|
-| lexical | 18 | 1.0 | 0.898 | 1.0 | 0.0 |
-| paraphrase | 7 | 0.571 | 0.452 | 0.5 | 0.286 |
+| lexical | 18 | 1.0 | 0.931 | 1.0 | 0.0 |
+| paraphrase | 7 | 0.714 | 0.738 | 0.583 | 0.143 |
 
 Abstention on 8 unanswerable queries: 1.0
 
 Queries with no relevant result in the top 3:
 
-- (paraphrase) making machines understand human language -> abstained
-- (paraphrase) storing and querying structured information -> abstained
-- (paraphrase) how the internet moves data between machines -> ['Python for Data Analysis']
+- (paraphrase) how computers learn from examples -> ['Generative AI Learning Path (Beginner)', 'IEEE Transactions on Pattern Analysis and Machine Intelligence', 'Attention Is All You Need']
+- (paraphrase) how the internet moves data between machines -> abstained
 
 ## Grounding
 
 - Chat responses scored: 49; ungrounded (replaced) rate: 0.0
-- Citations: 24; accuracy: 1.0; invented titles: none
+- Citations: 21; accuracy: 1.0; invented titles: none
 
 ## Latency (ms, end to end on this machine)
 
 | Scope | n | p50 | p95 |
 |---|---|---|---|
-| all | 74 | 1.9 | 3.2 |
-| search | 25 | 2.1 | 2.7 |
-| chat | 49 | 1.1 | 3.4 |
+| all | 74 | 10.7 | 458.9 |
+| search | 25 | 9.1 | 10.7 |
+| chat | 49 | 400.1 | 461.1 |
 
 ## Transactions checks
 

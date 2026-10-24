@@ -19,6 +19,9 @@ import sys
 import time
 from datetime import date, datetime
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 from app import analytics, assistant as A, recommend, search, tools
 from app.db import connect, init_db
@@ -27,6 +30,12 @@ from app.llm import get_llm
 from app.seed import seed
 from . import cases as C
 from .metrics import hit_at_k, mean, percentile, recall_at_k, reciprocal_rank
+from app import analytics, assistant as A, recommend, search, tools
+from pathlib import Path
+
+
+
+
 
 BOLD = re.compile(r"\*\*(.+?)\*\*")
 

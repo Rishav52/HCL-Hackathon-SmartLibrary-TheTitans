@@ -1,10 +1,10 @@
 {
   "meta": {
-    "date": "2026-10-24T08:09:51",
-    "llm": "rule-based-offline",
-    "embedder": "hashing-v1",
-    "retrieval": "lexical fallback",
-    "min_score": 0.18
+    "date": "2026-10-24T15:54:17",
+    "llm": "gemini:gemini-2.5-flash",
+    "embedder": "st:sentence-transformers/all-MiniLM-L6-v2",
+    "retrieval": "semantic",
+    "min_score": 0.3
   },
   "search": {
     "per_query": [
@@ -17,8 +17,8 @@
         "rr": 1.0,
         "abstained": false,
         "top": [
-          "Python Crash Course",
           "Automate the Boring Stuff with Python",
+          "Python Crash Course",
           "Fluent Python"
         ]
       },
@@ -32,8 +32,8 @@
         "abstained": false,
         "top": [
           "Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow",
-          "Pattern Recognition and Machine Learning",
-          "Introduction to Machine Learning with Python"
+          "Introduction to Machine Learning with Python",
+          "The Elements of Statistical Learning"
         ]
       },
       {
@@ -59,9 +59,9 @@
         "rr": 1.0,
         "abstained": false,
         "top": [
-          "Python for Data Analysis",
           "Introduction to Data Science: A Python Approach",
-          "Data Science from Scratch"
+          "Data Science from Scratch",
+          "Python for Data Analysis"
         ]
       },
       {
@@ -82,12 +82,12 @@
         "category": "lexical",
         "query": "deep learning",
         "hit@3": 1.0,
-        "recall@5": 0.6666666666666666,
+        "recall@5": 1.0,
         "rr": 1.0,
         "abstained": false,
         "top": [
-          "Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow",
           "Deep Learning",
+          "Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow",
           "BERT: Pre-training of Deep Bidirectional Transformers"
         ]
       },
@@ -100,9 +100,9 @@
         "rr": 1.0,
         "abstained": false,
         "top": [
-          "BERT: Pre-training of Deep Bidirectional Transformers",
           "Attention Is All You Need",
-          "Natural Language Processing with Transformers"
+          "Natural Language Processing with Transformers",
+          "BERT: Pre-training of Deep Bidirectional Transformers"
         ]
       },
       {
@@ -115,8 +115,7 @@
         "abstained": false,
         "top": [
           "Database System Concepts",
-          "Designing Data-Intensive Applications",
-          "Recommender Systems for Academic Reading Lists"
+          "Designing Data-Intensive Applications"
         ]
       },
       {
@@ -129,8 +128,7 @@
         "abstained": false,
         "top": [
           "Introduction to Algorithms",
-          "Python for Data Analysis",
-          "Data Science from Scratch"
+          "Designing Data-Intensive Applications"
         ]
       },
       {
@@ -164,13 +162,13 @@
         "category": "lexical",
         "query": "probability and statistics",
         "hit@3": 1.0,
-        "recall@5": 0.75,
+        "recall@5": 1.0,
         "rr": 1.0,
         "abstained": false,
         "top": [
           "Probability and Statistics for Engineers",
           "Pattern Recognition and Machine Learning",
-          "Data Science Foundations Learning Path"
+          "Data Science from Scratch"
         ]
       },
       {
@@ -182,8 +180,7 @@
         "rr": 1.0,
         "abstained": false,
         "top": [
-          "Clean Code",
-          "Probability and Statistics for Engineers"
+          "Clean Code"
         ]
       },
       {
@@ -254,25 +251,29 @@
         "id": "p01",
         "category": "paraphrase",
         "query": "how computers learn from examples",
-        "hit@3": 1.0,
+        "hit@3": 0.0,
         "recall@5": 0.6666666666666666,
-        "rr": 0.5,
+        "rr": 0.25,
         "abstained": false,
         "top": [
-          "Data Science Foundations Learning Path",
-          "Hands-On Machine Learning with Scikit-Learn, Keras and TensorFlow",
-          "The Elements of Statistical Learning"
+          "Generative AI Learning Path (Beginner)",
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+          "Attention Is All You Need"
         ]
       },
       {
         "id": "p02",
         "category": "paraphrase",
         "query": "making machines understand human language",
-        "hit@3": 0.0,
-        "recall@5": 0.0,
-        "rr": 0.0,
-        "abstained": true,
-        "top": []
+        "hit@3": 1.0,
+        "recall@5": 1.0,
+        "rr": 0.5,
+        "abstained": false,
+        "top": [
+          "Generative AI with Large Language Models: A Beginner's Guide",
+          "BERT: Pre-training of Deep Bidirectional Transformers",
+          "Natural Language Processing with Transformers"
+        ]
       },
       {
         "id": "p03",
@@ -283,7 +284,8 @@
         "rr": 1.0,
         "abstained": false,
         "top": [
-          "Deep Learning"
+          "Deep Learning",
+          "Attention Is All You Need"
         ]
       },
       {
@@ -295,18 +297,24 @@
         "rr": 1.0,
         "abstained": false,
         "top": [
-          "Generative AI with Large Language Models: A Beginner's Guide"
+          "Generative AI with Large Language Models: A Beginner's Guide",
+          "Natural Language Processing with Transformers",
+          "BERT: Pre-training of Deep Bidirectional Transformers"
         ]
       },
       {
         "id": "p05",
         "category": "paraphrase",
         "query": "storing and querying structured information",
-        "hit@3": 0.0,
-        "recall@5": 0.0,
-        "rr": 0.0,
-        "abstained": true,
-        "top": []
+        "hit@3": 1.0,
+        "recall@5": 1.0,
+        "rr": 0.3333333333333333,
+        "abstained": false,
+        "top": [
+          "Semantic Search for University Digital Libraries",
+          "Designing Data-Intensive Applications",
+          "Database System Concepts"
+        ]
       },
       {
         "id": "p06",
@@ -315,10 +323,8 @@
         "hit@3": 0.0,
         "recall@5": 0.0,
         "rr": 0.0,
-        "abstained": false,
-        "top": [
-          "Python for Data Analysis"
-        ]
+        "abstained": true,
+        "top": []
       },
       {
         "id": "p07",
@@ -337,16 +343,16 @@
       "lexical": {
         "n": 18,
         "hit@3": 1.0,
-        "recall@5": 0.898,
+        "recall@5": 0.931,
         "mrr": 1.0,
         "false_abstain": 0.0
       },
       "paraphrase": {
         "n": 7,
-        "hit@3": 0.571,
-        "recall@5": 0.452,
-        "mrr": 0.5,
-        "false_abstain": 0.286
+        "hit@3": 0.714,
+        "recall@5": 0.738,
+        "mrr": 0.583,
+        "false_abstain": 0.143
       }
     },
     "abstention": {
@@ -751,26 +757,26 @@
   "grounding": {
     "responses": 49,
     "ungrounded_rate": 0.0,
-    "citations": 24,
+    "citations": 21,
     "citation_accuracy": 1.0,
     "invented_titles_in_answers": []
   },
   "latency": {
     "all": {
       "n": 74,
-      "p50_ms": 1.9,
-      "p95_ms": 3.2,
-      "max_ms": 4.0
+      "p50_ms": 10.7,
+      "p95_ms": 458.9,
+      "max_ms": 597.7
     },
     "search": {
       "n": 25,
-      "p50_ms": 2.1,
-      "p95_ms": 2.7
+      "p50_ms": 9.1,
+      "p95_ms": 10.7
     },
     "chat": {
       "n": 49,
-      "p50_ms": 1.1,
-      "p95_ms": 3.4
+      "p50_ms": 400.1,
+      "p95_ms": 461.1
     }
   },
   "gates": [
@@ -846,14 +852,14 @@
     },
     {
       "name": "Search hit@3, paraphrase queries",
-      "value": 0.571,
+      "value": 0.714,
       "target": 0.7,
-      "gated": false,
-      "passed": false
+      "gated": true,
+      "passed": true
     },
     {
       "name": "Latency p95 (ms, lower is better)",
-      "value": 3.2,
+      "value": 458.9,
       "target": 3000.0,
       "gated": true,
       "passed": true
